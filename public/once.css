@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Funhouse;
+    src: url(Funhouse.ttf);
+}
+
+body {
+  background-color: #2D9800;
+  color: #FCDA33;
+  font-family: Funhouse;
+}
+
+.winning-number {
+  font-size: 24px;
+}

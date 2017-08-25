@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const random = require('random-number-generator');
 
 const port = process.env.PORT || 3000;
 var app = express();
@@ -59,6 +60,14 @@ app.get('/', (req, res) => {
   res.render('home.hbs', {
     pageTitle: 'Home Page Title',
     welcomeMessage: 'Welcome to JC Website'
+  });
+});
+
+app.get('/once', (req, res) => {
+  var winningNumber = "" + random(9) + random(9) + random(9) + random(9) + random(9);
+  res.render('once.hbs', {
+    pageTitle: 'La ONCE App',
+    winningNumber: winningNumber
   });
 });
 
