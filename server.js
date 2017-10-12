@@ -71,6 +71,12 @@ app.get('/once', (req, res) => {
   });
 });
 
+app.get('/cumple-lokita', (req, res) => {
+  res.render('cumple-lokita.hbs', {
+    pageTitle: 'Feliz Cumple Lokita! - TE AMO! :)'
+  });
+});
+
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page Title',
